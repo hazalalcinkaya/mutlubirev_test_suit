@@ -1,3 +1,4 @@
+//Elementlere uygulayacaðýmýz methodlarýn tanýmlandýðý yer
 package pages;
 import java.util.List;
 import org.openqa.selenium.By;
