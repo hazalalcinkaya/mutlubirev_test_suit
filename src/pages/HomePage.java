@@ -10,9 +10,13 @@ public class HomePage extends PageBase{
      }
      // WebElements
      public String btnSignUp = "Giriþ Yap"; //   id
-     public String btnUsername = "Password"; //   id
+     public String btnUsername = "Email"; //   id
+     public String btnPassword="Password";
      public String btnDownSignUp= "LogIn"; //
      public String btnAccept="KABUL ET"; //btn
+     public String btnDownSignUp2="red-action-button submit-btn";
+	
+	
     
 
    

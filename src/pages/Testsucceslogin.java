@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import basics.Initial;
 
@@ -15,10 +16,9 @@ public class Testsucceslogin {
 
    	 String btnSignUp = homePage.btnSignUp;
    	 String btnUsername = homePage.btnUsername;
-   	 String btnDownSignUp= homePage.btnDownSignUp;
-   	 String btnAccept= homePage.btnAccept;
+   	 String btnPassword = homePage.btnPassword;
 
-
+   	// String btnDownSignUp= homePage.btnDownSignUp;
    	 
    	 //PageBase pageBase = new PageBase(Initial.driver, Initial.wait);
    	 //Giriþ yap butonuna týklanýr
@@ -26,19 +26,18 @@ public class Testsucceslogin {
    	//username alanýna týklanýr
    	driver.findElement(By.linkText(btnSignUp)).click();
    	//username deðerler girilir
-   	driver.findElement(By.id("Email")).sendKeys("hazal.alcinkaya@gmail.com");
+   	driver.findElement(By.id(btnUsername)).sendKeys("hazal.alcinkaya@gmail.com");
    	//password alanýna týklanýr.
-   	driver.findElement(By.id(btnUsername)).click();
-   	//password alanýna deðerler gönderilir
-   	driver.findElement(By.id(btnUsername)).sendKeys("sat12345");
-   	
+   	driver.findElement(By.id(btnPassword)).click();
+   	//password alanýna doðru deðerler gönderilir
+   	driver.findElement(By.id(btnPassword)).sendKeys("sat12345");
+   	//sayfa ýlk acýldýgýnda giriþ yap butonu görülmediði için scroll yapýlýr
    	JavascriptExecutor js = (JavascriptExecutor) driver;
    	js.executeScript("window.scrollBy(0,250)");
    	
    	//Giriþ yap butonuna týklanýr.
-    driver.findElement(By.id(btnDownSignUp)).click();
-    //ýlk açýldýðýnda çýkan çerez kullanýmý uyarýsý kabul et týklanýr.
-   //	Initial.driver.findElement(By.linkText(btnAccept)).click();
+   	//Burada html içindeký tum locatorlarla ulasmayý denedým ancak baþarýlý olamadým
+     driver.findElement(By.id(btnSignUp)).click(); 
 
 }
 
